@@ -1,0 +1,71 @@
+=============================================================================
+@file: ProblemsToFix.txt
+@author: Kevin Gates
+
+@date: 07/11/2017 11:03:00
+
+@description: Documents problems with the current version of CROW compare
+	      to be fixed in future versions of the code.  This file will
+	      also document when problems have been fixed. All
+	      documentation will exist in logs where each log follows the
+	      format bellow.  Add new logs above old ones.
+
+@format: -----------------------------------------------------
+	 log <date/time> , ver<version #>
+	 	description: <general description>
+		Problems: <problems/errors>
+		Fixes: <fixed problems>
+	 -----------------------------------------------------
+=============================================================================
+-----------------------------------------------------------------------------
+log 7/19/2017 13:38:00 , ver1.0
+	description: BIG PROBLEM FOUND
+	Problems: The keyword cell I'm looking for ('OutageApprovalApproveSelectedOut')
+		  does not always appear in full! I think it has something to do with the length
+		  of one's username at the start of the csv doc because it was not a problem for
+		  Ken, but was for Linda (her username is longer than most as it follows slightly
+		  different convention)
+	Fixes: None
+
+-----------------------------------------------------------------------------
+log 07/18/2017 12:58:00 , ver1.0
+	description: solved a problem
+	Problems: Same as previous ver1.0 logs (except for things in 'Fixes')
+	Fixes: In file explorer, clicking cancel no longer causes an error.
+	       Also clicking the 'X' in the UserForm stops itteration
+
+-----------------------------------------------------------------------------
+log 07/12/2017 15:12:00 , ver1.0
+	description: Log upon completiong on ver1.0 documentation
+	Problems: In addtion to the previous log's problems, the UserForm code
+		  for deciding if to include an outage does not handle if the'X'
+		  button is pressed properly.  It should exit all Macros, but it is
+		  currently set to default behavior which is to exit the form, but not
+		  the calling Macro (which can be a problem when iterating).
+		  If the code of the button can be specified it will be an easy fix, but if not
+		  one idea would be to make a field call 'xButton' which is true by default but 
+		  becomes false in any of the button press functions.  Then, somehow read the value of
+		  this field from the calling macro and if true, the whole set of Macros will 'End'
+	Fixes: None
+
+-----------------------------------------------------------------------------
+log 07/11/2017 11:09:00 , ver1.0
+	description: Initial log containing main problem w/ver1.0
+	Problems: -Cannot determine hand-offs or tap change outages
+
+		  -Automatically assumes if outage in both crow and OSImp
+		   that it's correct.  Need to check if might be incorrect 
+                   and make new prompt to see if should be taken out.
+
+		  -userform for ask_unsure treats 'x' button incorrectly.
+		   It should both exit the form but ALSO exit the macro,
+		   the latter of which it does not do.
+
+		  -instillation needs to be automatic not manual
+
+		  -would prefer to get EMS server access for OSImport data
+		   instead of having user print to a csv
+
+	Fixes: NA (First log of first version)
+
+-----------------------------------------------------------------------------
