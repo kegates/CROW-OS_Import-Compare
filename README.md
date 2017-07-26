@@ -26,6 +26,7 @@ DESCRIPTION: This addin is a set of macros meant to compare crow transmission ou
 ---------------------------------------------------------------------------------------------
 
 INSTRUCTIONS: 
+	      
 	      1. If haven't already, set default printer to Generic / Text Only
 		(Start Menu -> Type Devices and Printers -> Right Click the Printer
 		 and select 'Select as Default Printer')
@@ -82,6 +83,7 @@ INSTRUCTIONS:
 ---------------------------------------------------------------------------------------------
 
 INSTILLATION:
+		
 		1. Open the zipped folder and move the folder inside your Microsoft AddIns
 		   folder.  The Add-In will not work if you do not move the folder here!
 
